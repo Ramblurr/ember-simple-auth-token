@@ -171,7 +171,7 @@ export default TokenAuthenticator.extend({
 
             resolve(sessionData);
           } catch(error) {
-            reject(new Error(error));
+            reject(error);
           }
         });
       }, xhr => {
@@ -234,7 +234,7 @@ export default TokenAuthenticator.extend({
             this.trigger('sessionDataUpdated', sessionData);
             resolve(sessionData);
           } catch(error) {
-            reject(new Error(error));
+            reject(error);
           }
         });
       }, (xhr, status, error) => {
